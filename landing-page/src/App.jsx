@@ -2,6 +2,8 @@ import { Helmet } from 'react-helmet';
 import 'remixicon/fonts/remixicon.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Info from './components/Info';
+
 function App() {
   
   return (
@@ -14,6 +16,7 @@ function App() {
       </Helmet>
       <Header />
       <Hero />
+      <Info />
     </>
   )
 }
