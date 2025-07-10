@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet';
 import 'remixicon/fonts/remixicon.css';
 import Header from './components/Header';
+import Hero from './components/Hero';
 function App() {
   
   return (
@@ -12,6 +13,7 @@ function App() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Helmet>
       <Header />
+      <Hero />
     </>
   )
 }
