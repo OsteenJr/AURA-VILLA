@@ -172,8 +172,107 @@ section {
 .info-container i {
   font-size: 2rem;
 }
+.exclusive-villas {
+  display: flex;
+  background-color: #f4f4f4;
+  padding: 2rem 1rem;
+  justify-content: space-evenly;
+  margin-top: 3rem;
+}
+.exclusive-text {
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.exclusive-top {
+  display: flex;
+  justify-content: space-evenly;
+}
+.second {
+  color: #8a8a8a;
+}
+.exclusive-card {
+  position: relative;
+  max-width: 350px;
+  filter: grayscale(0%);
+}
+.exclusive-card:hover {
+  transform: scale(1.05);
+  filter: grayscale(100%);
+}
+.exclusive-card-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+.exclusive-bottom p {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.exclusive-bottom p span {
+  color: #BDCD87;
+}
+.exclusive-card img {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.exclusive-card a {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: rgba(254, 254, 254, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  color: #303030;
+  border-radius: 20px;
+  font-weight: 700;
+}
+.exclusive-card i {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: rgba(254, 254, 254, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: .5rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.exclusive-card .img-text {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 2rem;
+  background-color: #FEFEFE;
+  left: 18%;
+  padding: 1rem 1rem;
+  border-radius: 10px;
+}
+.exclusive-card .img-text span {
+  font-size: 0.75rem;
+}
+.exclusive-card .img-text p {
+  font-weight: 700;
+}
+
 /*========== RESPONSIVE BREAKPOINTS ==========*/
-@media screen and (max-width: 1200px) {}
+@media screen and (max-width: 1050px) {
+  .exclusive-villas {
+    flex-direction: column;
+    align-items: center;
+  }
+  .exclusive-text {
+    margin-bottom: 3rem;
+  }
+  .exclusive-top {
+    margin-bottom: 4rem;
+  }
+}
 @media screen and (max-width: 800px) {
   .hero-content-text h1 {
   font-size: 2.5rem;
@@ -183,6 +282,15 @@ section {
   }
   .hero-content-text a {
     padding: 0.8rem 1.5rem;
+  }
+  .exclusive-card .img-text {
+    opacity: 0;
+    pointer-events: none;
+    padding: 0.5rem;
+  }
+  .exclusive-card:hover .img-text{
+    pointer-events: auto;
+    opacity: 1;
   }
 
 }
@@ -206,6 +314,15 @@ section {
   .hero-content-text a {
     padding: 0.6rem 1.2rem;
     display: block;
+  }
+  /* .exclusive-card .img-text span {
+    font-size: 0.6rem;
+  }
+  .exclusive-card .img-text p {
+    font-size: 0.9rem;
+  } */
+  .exclusive-card-container {
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 450px) {
@@ -242,6 +359,21 @@ section {
   .info-container p {
     font-size: 0.9rem;
   }
+  .exclusive-top {
+    margin-bottom: 1rem;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .exclusive-top p {
+    font-size: 0.75rem;
+  }
+  .exclusive-bottom {
+    text-align: center;
+  }
+  .exclusive-bottom p {
+    font-size: 2rem;
+  }
+  
 }
 @media screen and (max-width: 320px) {
   header {
@@ -286,6 +418,9 @@ section {
   }
   .info-container p {
     font-size: 0.7rem;
+  }
+  .exclusive-card .img-text {
+    display: none;
   }
   
 }
