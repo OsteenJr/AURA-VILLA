@@ -269,6 +269,9 @@ section {
   .exclusive-text {
     margin-bottom: 3rem;
   }
+  .exclusive-bottom {
+    text-align: center;
+  }
   .exclusive-top {
     margin-bottom: 4rem;
   }
@@ -366,9 +369,6 @@ section {
   }
   .exclusive-top p {
     font-size: 0.75rem;
-  }
-  .exclusive-bottom {
-    text-align: center;
   }
   .exclusive-bottom p {
     font-size: 2rem;
